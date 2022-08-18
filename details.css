@@ -1,0 +1,253 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* #02f0f0 */
+/* #c2cbe9 */
+/* #4040e8 */
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+    margin-top: 10px;
+}
+
+.filter_sec {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tools {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+
+.tools label {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.trash {
+    color: red;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.edit {
+    color: blue;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.filter {
+    width: auto;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    background-color: #30c02f;
+    cursor: pointer;
+}
+
+.filter .inpt_div input {
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    outline: none;
+    padding: 2px 5px;
+    border-radius: 5px;
+    box-shadow: -1px 3px 10px #30c02f inset;
+}
+
+.filter .icon_div .fa-solid {
+    font-size: 25px;
+    padding: 2px;
+    margin-left: 5px;
+    color: white;
+    font-weight: 900;
+}
+
+.info_container table,
+.info_container th,
+.info_container td {
+    border: 1px solid #30c02f;
+    border-collapse: collapse;
+}
+
+.info_container table {
+    width: 100vw;
+    height: auto;
+    font-size: 18px;
+    position: relative;
+}
+
+.info_container th {
+    font-size: 20px;
+    border-collapse: collapse;
+    padding: 10px 10px;
+    color: white;
+    font-weight: 900;
+    background-color: #30c02f;
+    border: 2px solid white;
+}
+
+.info_container tr {
+    width: 100%;
+    height: 60px;
+}
+
+.info_container tr:hover {
+    background-color: #30c02f;
+    border: 1px solid #30c02f;
+}
+
+.info_container tr:hover td {
+    color: white;
+    border: 1px solid white;
+    font-weight: 500;
+}
+
+.info_container td {
+    padding: 10px 10px;
+    position: relative;
+}
+
+
+.operate {
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    border: .5px solid #30c02f;
+    padding-top: 20px;
+}
+
+
+.informer {
+    width: 100px;
+    position: absolute;
+    color: black;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
+    font-size: 16px;
+    background-color: transparent;
+    display: none;
+}
+
+
+td:hover .informer {
+    display: block;
+}
+
+.details{
+    position: relative;
+}
+
+
+.add_btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    display: grid;
+    place-items: center;
+    font-size: 40px;
+    box-shadow: 1px -1px 20px 0px #30c02f;
+    background-color: #30c02f;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+.add_info{
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    color: red;
+    display: none;
+}
+
+.add_btn:hover ~ .add_info{
+    display: block;
+}
+
+body{
+    position: relative;
+    perspective: 800px;
+}
+
+.edit_form{
+    width: 100vw;
+    height: auto;
+    background-color: rgba(48, 192, 47,.5);
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: transform 2s;
+    display: grid;
+    place-items: center;
+}
+
+.inner_form{
+    width: 500px;
+    background-color: #30c02f;
+    border: 2px solid white;
+    height: auto;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.show{
+    transform: rotateX(0deg);
+    color: white;
+    font-weight: 500;
+}
+
+
+.field1 input[type="text"]{
+    width: 470px;
+    padding: 2px 5px;
+    font-size: 18px;
+}
+
+.last_field{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.update_btn{
+    padding: 5px;
+    font-size: 20px;
+    
+}
+.update_btn:hover{
+    border: 1px solid white;
+    color: white;
+    background-color: #30c02f;
+}
+@media screen and (max-width:500px) {
+    .inner_form{
+        width: 100vw;
+    }
+    .field1 input[type="text"]{
+        width: 100%;
+    }
+}

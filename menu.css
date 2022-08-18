@@ -1,0 +1,128 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    list-style-type:none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  /* #02f0f0 */
+  /* #c2cbe9 */
+  /* #4040e8 */
+  .menu_sec{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #30c02f;
+    position: relative;
+  }
+  .title{
+    font-size: 30px;
+    font-family: cursive;
+    font-weight: 900;
+    padding: 5px 0 5px 20px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: -9px -3px 9px #000;
+    cursor: pointer;
+}
+
+.active{
+    border-bottom: 2px solid white;
+}
+
+.menu{
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .5s;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+
+}
+
+
+#inpt_menu{
+    display: none;
+}
+
+#inpt_menu:checked ~ .menu_lst{
+    display: flex;
+}
+
+.menu_lst{
+    height: calc( 100vh - 70px);
+    width: 500px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: -459px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #30c02f;
+    z-index: 1000000;
+    border-bottom-left-radius: 200px;
+}
+
+.menu_lst li{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a7a7a7;
+}
+.menu  .menu_lst li .fa-solid{
+    width: 50px;
+    font-size:30px;
+    color: white;
+    transform: translateY(100px);
+    transition: .25s;
+}
+
+.menu  .menu_lst li a{
+    width: 200px;
+    padding: 5px 5px 20px 30px;
+    color: white;
+}
+.menu  .menu_lst li:hover .fa-solid{
+    transform: translateY(0px);
+}
+
+
+
+
+    @media screen and (max-width:900px) {
+        .title{
+            font-size: 25px;
+            font-weight: 500;
+        }
+        
+        .menu{
+            font-size: 20px;
+        }
+        
+        .menu_lst{
+            z-index: 100000;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .title{
+            font-size: 17px;
+            padding: 0px;
+            letter-spacing: 0;
+            font-weight: 300;
+        }
+        .menu_lst{
+            width: 100vw;
+            left: -85vw;
+            top: 35px;
+            border-bottom-left-radius: 40%;
+        }
+    }

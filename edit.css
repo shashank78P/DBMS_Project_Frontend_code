@@ -1,0 +1,156 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* #02f0f0 */
+/* #c2cbe9 */
+/* #4040e8 */
+
+.sucess_msg{
+    width: 100vw;
+    height: auto;
+    display: none;
+    place-items: center;
+    top: 50px;
+}
+
+.message_box{
+    width: calc(100vw - 50%);
+    height: auto;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+
+
+.edit_sec {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+}
+
+
+.second {
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    padding: 10px 0 20px 50px;
+    border: 2px solid #30c02f;
+}
+
+.second .row {
+    margin-bottom: 10px;
+}
+
+
+.second .row label {
+    width: 500px;
+    height: auto;
+}
+
+.second input[type="text"],
+.second input[type="date"],
+.second input[type="email"],
+.second input[type="number"],
+.second input[type="submit"] {
+    width: 500px;
+    height: auto;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.form_header {
+    font-size: 20px;
+    color: #30c02f;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form_btn {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    background-color: #30c02f;
+    color: white;
+    font-weight: 500;
+    padding:5px 10px;
+    margin-right: 50px;
+}
+
+.form_btn:hover {
+    background-color: white;
+    color: #30c02f;
+    border: 1px solid #30c02f;
+    font-weight: 500;
+}
+
+.div_btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width:800px) {
+
+    .second,
+    .second .row label {
+        width: 500px;
+    }
+
+    .second input[type="text"],
+    .second input[type="date"],
+    .second input[type="email"],
+    .second input[type="number"],
+    .second input[type="submit"] {
+        width: 400px;
+    }
+
+    .form_header {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .form_btn {
+        width: auto;
+        padding-left: 10px;
+        font-size: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width:400px) {
+        section {
+            display: block;
+            margin: 0;
+        }
+
+        .second {
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+            padding-left: 20px;
+        }
+
+        .second .row label {
+            width: 100vw;
+        }
+
+        .second input[type="text"],
+        .second input[type="date"],
+        .second input[type="email"],
+        .second input[type="number"],
+        .second input[type="submit"] {
+            width: calc( 100vw - 50px);
+        }
+
+    }
+}
